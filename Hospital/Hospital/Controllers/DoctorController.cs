@@ -19,6 +19,8 @@ namespace Hospital.Controllers
             vista = view;
             vista.btnCerrarFormulario.Click += new EventHandler(cerrarFormulario);
             vista.Load += new EventHandler(itemEspecialidad);
+            vista.Load += new EventHandler(mostrarRegistrosDoctor);
+            vista.txtBuscar.TextChanged += new EventHandler(mostrarRegistrosDoctor);
         }
 
 
@@ -42,6 +44,14 @@ namespace Hospital.Controllers
                 vista.txtItems.Items.Add(item.ToString());
             }
         }
+
+        private void mostrarRegistrosDoctor(object sender, EventArgs e)
+        {
+            DoctorDAO dao = new DoctorDAO();
+            vista.TablaDoctor.DataSource = dao.MostarRegistros(vista.txtBuscar.Text);
+        }
+
+
 
     }
 }

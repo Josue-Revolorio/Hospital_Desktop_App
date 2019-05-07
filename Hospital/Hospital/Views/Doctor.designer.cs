@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TablaDoctor = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.txtDPI = new System.Windows.Forms.TextBox();
@@ -51,13 +51,13 @@
             this.txtItems = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDoctor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // TablaDoctor
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -66,20 +66,20 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(77, 430);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(989, 216);
-            this.dataGridView1.TabIndex = 0;
+            this.TablaDoctor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.TablaDoctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TablaDoctor.Location = new System.Drawing.Point(77, 430);
+            this.TablaDoctor.Name = "TablaDoctor";
+            this.TablaDoctor.RowTemplate.Height = 24;
+            this.TablaDoctor.Size = new System.Drawing.Size(989, 216);
+            this.TablaDoctor.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(74, 250);
+            this.label10.Location = new System.Drawing.Point(65, 246);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 18);
             this.label10.TabIndex = 43;
@@ -261,9 +261,9 @@
             // txtItems
             // 
             this.txtItems.FormattingEnabled = true;
-            this.txtItems.Location = new System.Drawing.Point(208, 246);
+            this.txtItems.Location = new System.Drawing.Point(194, 240);
             this.txtItems.Name = "txtItems";
-            this.txtItems.Size = new System.Drawing.Size(243, 24);
+            this.txtItems.Size = new System.Drawing.Size(258, 24);
             this.txtItems.TabIndex = 58;
             // 
             // pictureBox2
@@ -310,11 +310,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TablaDoctor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Doctor";
             this.Text = "RegistroDoctor";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TablaDoctor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarFormulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -325,7 +325,7 @@
 
         #endregion
 
-        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView TablaDoctor;
         public System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtTelefono;
         public System.Windows.Forms.TextBox txtDPI;
