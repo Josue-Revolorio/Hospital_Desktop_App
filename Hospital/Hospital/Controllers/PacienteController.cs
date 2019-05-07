@@ -26,8 +26,8 @@ namespace Hospital.Controllers
             this.vista = view;
             vista.btnCerrarformulario.Click += new EventHandler(cerrarFormulario);
             vista.Load += new EventHandler(item);
-            vista.Load += new EventHandler(pacientesMostrarRegistros);
-            vista.txtBuscar.TextChanged += new EventHandler(pacientesMostrarRegistros);
+            vista.Load += new EventHandler(mostrarRegistrosPaciente);
+            vista.txtBuscar.TextChanged += new EventHandler(mostrarRegistrosPaciente);
             vista.btnGuardar.Click += new EventHandler(registrarPaciente);
             vista.btnActualizar.Click += new EventHandler(actualizarPaciente);
             vista.btnEliminar.Click += new EventHandler(eliminarPaciente);
@@ -56,7 +56,7 @@ namespace Hospital.Controllers
         /*---------------------------------------------------------------------------------------*/
 
         /*---------------------------------------Metodo de Mostrar, Eliminar, Actualizar BD------------------------------------*/
-        private void pacientesMostrarRegistros(object sender, EventArgs e)
+        private void mostrarRegistrosPaciente(object sender, EventArgs e)
         {
             PacienteDAO dao = new PacienteDAO();
             vista.TablaPacientes.DataSource = dao.mostrarRegistros(vista.txtBuscar.Text);
@@ -73,7 +73,7 @@ namespace Hospital.Controllers
                 {
                     dao.isertarRegistro(vista.txtNombre.Text, vista.txtApellido.Text, fecha, vista.txtDPI.Text, vista.txtDireccion.Text, Convert.ToInt32(vista.txtTelefono.Text), vista.txtNit.Text, vista.txtSexo.Text);
                     MessageBox.Show("Guardado con exito");
-                    pacientesMostrarRegistros(null, e);
+                    mostrarRegistrosPaciente(null, e);
 
                 }
                 catch (Exception ex)
@@ -89,7 +89,7 @@ namespace Hospital.Controllers
                 {
                     dao.editarRegistro(vista.txtNombre.Text, vista.txtApellido.Text, fecha, vista.txtDPI.Text, vista.txtDireccion.Text, Convert.ToInt32(vista.txtTelefono.Text), vista.txtNit.Text, vista.txtSexo.Text, Convert.ToInt32(id));
                     MessageBox.Show("Actualizado con exito");
-                    pacientesMostrarRegistros(null, e);
+                    mostrarRegistrosPaciente(null, e);
                     actualizar = false;
 
                 }
@@ -146,7 +146,7 @@ namespace Hospital.Controllers
                     id = vista.TablaPacientes.CurrentRow.Cells["Id"].Value.ToString();
                     dao.eliminarRegistro(Convert.ToInt32(id));
                     MessageBox.Show("Eliminado con exito");
-                    pacientesMostrarRegistros(null, e);
+                    mostrarRegistrosPaciente(null, e);
                 }
 
             }

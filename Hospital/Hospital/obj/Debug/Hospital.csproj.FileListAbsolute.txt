@@ -11,3 +11,16 @@ C:\Users\josue\source\repos\Hospital\Hospital\bin\Debug\Hospital.pdb
 C:\Users\josue\source\repos\Hospital\Hospital\obj\Debug\View.MenuPrincipal.resources
 C:\Users\josue\source\repos\Hospital\Hospital\obj\Debug\Hospital.exe
 C:\Users\josue\source\repos\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\bin\Debug\Hospital.exe.config
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\bin\Debug\Hospital.exe
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\bin\Debug\Hospital.pdb
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.csprojAssemblyReference.cache
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Properties.Resources.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\View.Inicio.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\View.MenuPrincipal.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\View.Paciente.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\View.Doctor.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.csproj.GenerateResource.cache
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.exe
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.pdb

@@ -16,7 +16,7 @@ namespace View
         public Paciente()
         {
             InitializeComponent();
-            PacienteController vista = new PacienteController(this);
+            PacienteController vistaPaciente = new PacienteController(this);
         }
 
     }

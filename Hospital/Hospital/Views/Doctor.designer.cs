@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Doctor));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,31 +41,32 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCerrarDoc = new System.Windows.Forms.PictureBox();
+            this.btnCerrarFormulario = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtItems = new System.Windows.Forms.ComboBox();
-            this.btnBCodigo = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarDoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarFormulario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(77, 430);
             this.dataGridView1.Name = "dataGridView1";
@@ -170,17 +171,17 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCerrarDoc
+            // btnCerrarFormulario
             // 
-            this.btnCerrarDoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrarDoc.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarDoc.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarDoc.Image")));
-            this.btnCerrarDoc.Location = new System.Drawing.Point(1143, 12);
-            this.btnCerrarDoc.Name = "btnCerrarDoc";
-            this.btnCerrarDoc.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrarDoc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCerrarDoc.TabIndex = 49;
-            this.btnCerrarDoc.TabStop = false;
+            this.btnCerrarFormulario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrarFormulario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarFormulario.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarFormulario.Image")));
+            this.btnCerrarFormulario.Location = new System.Drawing.Point(1143, 12);
+            this.btnCerrarFormulario.Name = "btnCerrarFormulario";
+            this.btnCerrarFormulario.Size = new System.Drawing.Size(25, 25);
+            this.btnCerrarFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCerrarFormulario.TabIndex = 49;
+            this.btnCerrarFormulario.TabStop = false;
             // 
             // label1
             // 
@@ -246,20 +247,12 @@
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
             // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(509, 345);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(218, 24);
-            this.txtBuscar.TabIndex = 56;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(422, 348);
+            this.label4.Location = new System.Drawing.Point(316, 365);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 18);
             this.label4.TabIndex = 57;
@@ -273,36 +266,40 @@
             this.txtItems.Size = new System.Drawing.Size(243, 24);
             this.txtItems.TabIndex = 58;
             // 
-            // btnBCodigo
+            // pictureBox2
             // 
-            this.btnBCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(128)))), ((int)(((byte)(194)))));
-            this.btnBCodigo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.btnBCodigo.FlatAppearance.BorderSize = 0;
-            this.btnBCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBCodigo.ForeColor = System.Drawing.Color.White;
-            this.btnBCodigo.Location = new System.Drawing.Point(754, 344);
-            this.btnBCodigo.Name = "btnBCodigo";
-            this.btnBCodigo.Size = new System.Drawing.Size(85, 25);
-            this.btnBCodigo.TabIndex = 59;
-            this.btnBCodigo.Text = "Codigo";
-            this.btnBCodigo.UseVisualStyleBackColor = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(714, 364);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 60;
+            this.pictureBox2.TabStop = false;
             // 
-            // RegistroDoctor
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(377, 364);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(385, 22);
+            this.txtBuscar.TabIndex = 59;
+            // 
+            // Doctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1180, 715);
-            this.Controls.Add(this.btnBCodigo);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.txtItems);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCerrarDoc);
+            this.Controls.Add(this.btnCerrarFormulario);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtTelefono);
@@ -315,11 +312,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "RegistroDoctor";
+            this.Name = "Doctor";
             this.Text = "RegistroDoctor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarDoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrarFormulario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,26 +325,26 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtDPI;
-        private System.Windows.Forms.TextBox txtApellido;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox btnCerrarDoc;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox txtItems;
-        private System.Windows.Forms.Button btnBCodigo;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtDPI;
+        public System.Windows.Forms.TextBox txtApellido;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox btnCerrarFormulario;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.Button btnActualizar;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ComboBox txtItems;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        public System.Windows.Forms.TextBox txtBuscar;
     }
 }
