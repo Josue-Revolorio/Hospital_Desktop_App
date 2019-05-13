@@ -64,7 +64,9 @@ namespace Hospital.Controllers
 
         private void registrarPaciente(object sender, EventArgs e)
         {
+            /* Convierte de string a Date */
             DateTime date = Convert.ToDateTime(vista.txtDatePicker.Text);
+            /*Da Formato a la fecha*/
             string fecha = date.ToString("yyyy/MM/dd");
 
             if(actualizar == false)
@@ -156,7 +158,7 @@ namespace Hospital.Controllers
             }
 
         }
-
+        /*-----------------------------------------------------------------------------------*/
 
     }
 }

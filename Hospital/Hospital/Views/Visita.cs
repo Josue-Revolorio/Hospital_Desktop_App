@@ -9,16 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Controllers;
 
-namespace View
+namespace Hospital.Views
 {
-    public partial class MenuPrincipal : Form 
+    public partial class Visita : Form
     {
-
-        public MenuPrincipal()
+        public Visita()
         {
             InitializeComponent();
-            HomeCotroller menu = new HomeCotroller(this);
+            VisitaController vista = new VisitaController(this);
         }
-        
+
     }
 }

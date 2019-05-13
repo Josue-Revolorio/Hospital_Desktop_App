@@ -35,7 +35,7 @@ INSERT INTO Paciente VALUES('Elmer Alejandro','Perez Lopez','1994/05/21','385124
 INSERT INTO Paciente VALUES('Juan Alexander','Perez Lopez','1994/05/21','2851247859585','4 Calle 201-53 Zona 12 Guatemala',45623596,'451254-1','M');
 GO
 
-/*-------------------------------- Procediminetos Almacenados -------------------------------------------- */
+/*-------------------------------- Procediminetos Almacenados Tabla de Pacientes -------------------------------------------- */
 
 
 /*------- Mostrar Pacientes y Consultarlos ------- */
@@ -69,7 +69,7 @@ CREATE PROC ActualizarPaciente
 @telefono INT,
 @nit VARCHAR(15),
 @sexo VARCHAR (4),
-@id int
+@id INT
 as
 update Paciente set Nombre = @nombre, Apellido = @apellido, Birthdate = @birthdate, DPI = @dpi, Direccion = @direccion, Telefono = @telefono, Nit = @nit, Sexo=@sexo where id_Paciente = @id;
 GO
@@ -98,7 +98,7 @@ INSERT INTO Especialidad VALUES
 Go
 
 
-/*-------------------------------- Procediminetos Almacenados -------------------------------------------- */
+/*-------------------------------- Procediminetos Almacenados Table Especialidad-------------------------------------------- */
 
 /*------- Mostrar Especialidades ------- */
 create proc MostrarEspecialidad
@@ -127,7 +127,7 @@ INSERT INTO Doctor VALUES(104, 'Manuel Meleon', 'Rosales Perez', '8576693556245'
 Go
 
 
-/*-------------------------------- Procediminetos Almacenados -------------------------------------------- */
+/*-------------------------------- Procediminetos Almacenados Table de Doctores-------------------------------------------- */
 
 /*------- Mostrar Doctor y Especialidad ------- */
 create proc ConsultaDoctor
@@ -137,4 +137,87 @@ select d.id_Doctor, D.Nombre, D.Apellido, D.DPI, D.Telefono, E.Especializacion, 
 inner join  Especialidad as E on  D.id_Especialidad = E.id_Especialidad where D.id_Doctor like @Condicion+'%' or D.Nombre like @Condicion+'%' ;
 GO
 
-exec ConsultaDoctor '102'
+/*------- Registrar Doctor ------- */
+CREATE PROC RegistrarDoctor
+@id_Especialidad INT,
+@nombre VARCHAR(25),
+@apellido VARCHAR(25),
+@dpi VARCHAR(14),
+@telefono INT
+as
+insert into Doctor values (@id_Especialidad,@nombre,@apellido,@dpi,@telefono)
+GO
+
+/*------- Actualizar los registros de Doctores ------- */
+CREATE PROC ActualizarDoctor
+@id_Especialidad INT,
+@nombre VARCHAR(25),
+@apellido VARCHAR(25),
+@dpi VARCHAR(14),
+@telefono INT,
+@id INT
+as
+update Doctor set id_Especialidad = @id_Especialidad, Nombre = @nombre, Apellido = @apellido, DPI = @dpi, Telefono = @telefono where id_Doctor = @id;
+GO
+
+/*------- Eliminar los registros de Doctores ------- */
+create proc EliminarDoctor
+@id int
+as
+delete from Doctor where id_Doctor=@id
+GO
+
+
+/*--------------------------------------- Tabla de Precios ------------------------------------------ */
+CREATE TABLE Precio
+(
+id_Precio INT IDENTITY(101,1) primary Key,
+Tipo VARCHAR(30) NOT NULL,
+Costo INT NOT NULL,
+);
+GO
+
+/*------- Inserciones------- */
+INSERT INTO Precio VALUES('Consulta General', 90);
+INSERT INTO Precio VALUES('Consulta Especialidad', 200);
+INSERT INTO Precio VALUES('Cirugia Vascular', 11000);
+INSERT INTO Precio VALUES('Cirugia de piel', 8500);
+INSERT INTO Precio VALUES('Cirugia vesicular', 12000);
+INSERT INTO Precio VALUES('Traumatologia', 5000);
+INSERT INTO Precio VALUES('Triquiasis', 9500);
+INSERT INTO Precio VALUES('Cirugia de Cataratas', 13500);
+INSERT INTO Precio VALUES('Cirugia Osteotomia', 6000);
+INSERT INTO Precio VALUES('Cirugia Adenoidectomia', 9000);
+INSERT INTO Precio VALUES('Extraccion de Quiste', 2500);
+GO
+
+/*--------------------------------------- Tabla de Precios ------------------------------------------ */
+
+CREATE TABLE Visita
+(
+id_Visita INT IDENTITY(101,1) primary Key,
+id_Paciente INT,
+id_Doctor INT,
+id_Precio INT,
+Fecha_Ingreso SMALLDATETIME NOT NULL,
+Fecha_Salida SMALLDATETIME NOT NULL,
+Cama INT,
+CONSTRAINT fk_id_Paciente FOREIGN KEY (id_Paciente) REFERENCES Paciente (id_Paciente),
+CONSTRAINT fk_id_Doctor  FOREIGN KEY (id_Doctor) REFERENCES Doctor (id_Doctor),
+CONSTRAINT fk_id_Precio FOREIGN KEY (id_Precio) REFERENCES Precio (id_Precio)
+);
+GO
+
+INSERT INTO Visita VALUES(102,103,101,GETDATE(),'2019/05/11',1);
+
+select *from Visita
+
+
+select  p.Nombre, D.Nombre, pr.Tipo, pr.Costo, v.Fecha_Salida From visita as v
+inner join Paciente as P on  P.id_Paciente= v.id_Paciente 
+inner join Doctor as D on  D.id_Doctor= v.id_Doctor 
+inner join Precio as Pr on  Pr.id_Precio= V.id_Precio   
+
+
+
+Select * From Doctor

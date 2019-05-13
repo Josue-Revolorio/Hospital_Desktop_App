@@ -69,5 +69,64 @@ namespace Hospital.Models.DAO
             return list;
         }
 
+        public void isertarRegistro(int idEspecialidad, string nombre, string apellido, string dpi, int telefono)
+        {
+            comando.Connection = Conexion;
+            Conexion.Open();
+
+            comando.CommandText = "RegistrarDoctor";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@id_Especialidad", idEspecialidad);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@apellido", apellido);
+            comando.Parameters.AddWithValue("@dpi", dpi);
+            comando.Parameters.AddWithValue("@telefono", telefono);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
+            Conexion.Close();
+        }
+
+        public void editarRegistro(int idEspecialidad, string nombre, string apellido, string dpi, int telefono,int id)
+        {
+            comando.Connection = Conexion;
+            Conexion.Open();
+
+            comando.CommandText = "ActualizarDoctor";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@id_Especialidad", idEspecialidad);
+            comando.Parameters.AddWithValue("@nombre", nombre);
+            comando.Parameters.AddWithValue("@apellido", apellido);
+            comando.Parameters.AddWithValue("@dpi", dpi);
+            comando.Parameters.AddWithValue("@telefono", telefono);
+            comando.Parameters.AddWithValue("@id", id);
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
+            Conexion.Close();
+        }
+
+        public void eliminarRegistro(int id)
+        {
+            comando.Connection = Conexion;
+            Conexion.Open();
+
+            comando.CommandText = "EliminarDoctor";
+            comando.CommandType = CommandType.StoredProcedure;
+
+            comando.Parameters.AddWithValue("@id", id);
+
+
+            comando.ExecuteNonQuery();
+            comando.Parameters.Clear();
+
+            Conexion.Close();
+        }
+
+
     }
 }

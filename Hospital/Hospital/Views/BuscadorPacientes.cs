@@ -9,16 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hospital.Controllers;
 
-namespace View
+namespace Hospital.Views
 {
-    public partial class MenuPrincipal : Form 
+    public partial class BuscadorPacientes : Form
     {
-
-        public MenuPrincipal()
+        public BuscadorPacientes()
         {
             InitializeComponent();
-            HomeCotroller menu = new HomeCotroller(this);
+            BuscardorController Vista = new BuscardorController(this);
         }
-        
     }
 }

@@ -24,3 +24,5 @@ C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hosp
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.csproj.CoreCompileInputs.cache
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.exe
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.pdb
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.Visita.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.BuscadorPacientes.resources

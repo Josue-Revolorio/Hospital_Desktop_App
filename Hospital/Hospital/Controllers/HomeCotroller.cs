@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Runtime.InteropServices;  // para mover el formulario
 using System.Windows.Forms;
 using View;
+using Hospital.Views;
 
 
 namespace Hospital.Controllers
@@ -31,6 +32,7 @@ namespace Hospital.Controllers
             vista.MenuVertical.MouseDown += new MouseEventHandler(moverFomulario);
             vista.btnInicio.MouseDown += new MouseEventHandler(moverFomulario);
             vista.btnInicio.Click += new EventHandler(abrirFormularioInicio);
+            vista.btnVisita.Click += new EventHandler(abrirFormularioVisita);
         }
 
         /*---------------------Metodos Para Cerra, minimizar , restaurar el formulario-----------------*/
@@ -106,9 +108,12 @@ namespace Hospital.Controllers
             abrirFormulario(new Inicio());
         }
 
+        private void abrirFormularioVisita(object sender, EventArgs e)
+        {
+            abrirFormulario(new Visita());
+        }
+
         /*--------------------------------------------------------------------------*/
 
-
-
-    }
+     }
 }
