@@ -33,6 +33,7 @@ namespace Hospital.Controllers
             vista.btnInicio.MouseDown += new MouseEventHandler(moverFomulario);
             vista.btnInicio.Click += new EventHandler(abrirFormularioInicio);
             vista.btnVisita.Click += new EventHandler(abrirFormularioVisita);
+            vista.btnHistorial.Click += new EventHandler(abrirFormularioHistorial);
         }
 
         /*---------------------Metodos Para Cerra, minimizar , restaurar el formulario-----------------*/
@@ -113,7 +114,13 @@ namespace Hospital.Controllers
             abrirFormulario(new Visita());
         }
 
+
+        private void abrirFormularioHistorial(object sender, EventArgs e)
+        {
+            abrirFormulario(new Historial());
+        }
+
         /*--------------------------------------------------------------------------*/
 
-     }
+    }
 }

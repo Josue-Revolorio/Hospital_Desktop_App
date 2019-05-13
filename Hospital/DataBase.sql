@@ -203,7 +203,6 @@ GO
 
 
 /*--------------------------------------- Tabla de Precios ------------------------------------------ */
-
 CREATE TABLE Visita
 (
 id_Visita INT IDENTITY(101,1) primary Key,
@@ -219,6 +218,7 @@ CONSTRAINT fk_id_Precio FOREIGN KEY (id_Precio) REFERENCES Precio (id_Precio)
 );
 GO
 
+
 /*-------------------------------- Procediminetos Almacenados Table Visita-------------------------------------------- */
 
 /*------- Registar Visita ------- */
@@ -232,9 +232,80 @@ as
 insert into Visita values (@id_Paciente,@id_Doctor,@id_Precio,GETDATE(),@Fecha_Salida,@Cama)
 GO
 
-select  p.Nombre, D.Nombre, pr.Tipo, pr.Costo, v.Fecha_Salida From visita as v
+/*------- Consultar Visita ------- */
+create proc MostrarVisita
+@Condicion nvarchar(30)
+as
+select P.id_Paciente, P.Nombre as Paciente, D.id_Doctor, D.Nombre as Doctor, E.Especializacion, V.id_Visita From visita as v
 inner join Paciente as P on  P.id_Paciente= v.id_Paciente 
 inner join Doctor as D on  D.id_Doctor= v.id_Doctor 
 inner join Precio as Pr on  Pr.id_Precio= V.id_Precio   
+inner join Especialidad as E on E.id_Especialidad = D.id_Especialidad where P.id_Paciente like @Condicion+'%' or P.Nombre  like @Condicion+'%' 
+Go
+
+exec MostrarVisita '' 
+/*--------------------------------------- Tabla Historial ------------------------------------------ */
+CREATE TABLE Historial
+(
+id_Historial INT IDENTITY(101,1) primary Key,
+id_Paciente INT,
+id_Doctor INT,
+id_Visita INT,
+Sintomas VARCHAR(600) NOT NULL,
+Diagnostico VARCHAR(600) NOT NULL,
+Tratamiento VARCHAR(400) NOT NULL,
+CONSTRAINT fK_id_Visita2  FOREIGN KEY(id_Visita) REFERENCES Visita (id_Visita),
+CONSTRAINT fK_id_Paciente2 FOREIGN KEY (id_Paciente) REFERENCES Paciente (id_Paciente),
+CONSTRAINT fK_id_Doctor2  FOREIGN KEY (id_Doctor) REFERENCES Doctor (id_Doctor),
+);
+GO
+
+/*-------------------------------- Procediminetos Almacenados Table Historia-------------------------------------------- */
+
+/*------- Registar Historial ------- */
+create proc RegistrarHistorial
+@id_Paciente INT,
+@id_Doctor INT,
+@id_Visita INT,
+@Sintomas VARCHAR(600),
+@Diagnostico VARCHAR(600),
+@Tratamiento VARCHAR(400)
+as
+insert into Historial values (@id_Paciente,@id_Doctor,@id_Visita,@Sintomas,@Diagnostico,@Tratamiento)
+GO
+
+
+/*------- Mostrar Historial ------- */
+create proc MostrarHistorial
+@Condicion nvarchar(30)
+as
+select h.id_Historial, P.id_Paciente, P.Nombre as Paciente, D.id_Doctor, D.Nombre as Doctor, V.id_Visita, E.Especializacion,H.Sintomas, H.Diagnostico, H.Tratamiento  from Historial as H
+inner join Paciente as P on P.id_Paciente = H.id_Paciente
+inner join Doctor as D on D.id_Doctor = H.id_Doctor
+inner join Visita as V on V.id_Visita = H.id_Visita
+inner join Especialidad as E on E.id_Especialidad = D.id_Especialidad where P.id_Paciente like @Condicion+'%' or P.Nombre  like @Condicion+'%'
+Go
+
+/*------- Actulizar Historial ------- */
+create proc ActulizarHistorial
+@id_Paciente INT,
+@id_Doctor INT,
+@id_Visita INT,
+@Sintomas VARCHAR(600),
+@Diagnostico VARCHAR(600),
+@Tratamiento VARCHAR(400),
+@id int
+as
+update Historial set id_Paciente = @id_Paciente, id_Doctor = @id_Doctor, id_Visita = @id_Visita, Sintomas = @Sintomas, Diagnostico = @Diagnostico, Tratamiento = @Tratamiento where id_Historial = @id;
+GO
+
+
+
+
+
+
+
+
+
 
 

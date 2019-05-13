@@ -36,7 +36,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnHistorial = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -103,7 +103,7 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.MenuVertical.Controls.Add(this.panel6);
-            this.MenuVertical.Controls.Add(this.button3);
+            this.MenuVertical.Controls.Add(this.btnHistorial);
             this.MenuVertical.Controls.Add(this.pictureBox1);
             this.MenuVertical.Controls.Add(this.panel5);
             this.MenuVertical.Controls.Add(this.button1);
@@ -126,16 +126,16 @@
             resources.ApplyResources(this.panel6, "panel6");
             this.panel6.Name = "panel6";
             // 
-            // button3
+            // btnHistorial
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(128)))), ((int)(((byte)(194)))));
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistorial.FlatAppearance.BorderSize = 0;
+            this.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(128)))), ((int)(((byte)(194)))));
+            resources.ApplyResources(this.btnHistorial, "btnHistorial");
+            this.btnHistorial.ForeColor = System.Drawing.Color.White;
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
@@ -297,7 +297,7 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Panel panel6;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btnHistorial;
     }
 }
 

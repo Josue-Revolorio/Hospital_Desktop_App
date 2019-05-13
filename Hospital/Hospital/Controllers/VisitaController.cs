@@ -49,8 +49,6 @@ namespace Hospital.Controllers
                 vista.AddOwnedForm(tipo);
                 tipo.Show();
             }
-
-
         }
 
         private void cerraFormulario(object sender, EventArgs e)
