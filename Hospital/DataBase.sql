@@ -60,7 +60,7 @@ insert into Paciente values (@nombre,@apellido,@birthdate,@dpi,@direccion,@telef
 GO
 
 /*------- Actualizar los registros de Pacientes ------- */
-CREATE PROC ActualizarPaciente
+create proc ActualizarPaciente
 @nombre VARCHAR(25),
 @apellido VARCHAR(25),
 @birthdate DATE,
@@ -191,6 +191,17 @@ INSERT INTO Precio VALUES('Cirugia Adenoidectomia', 9000);
 INSERT INTO Precio VALUES('Extraccion de Quiste', 2500);
 GO
 
+
+/*-------------------------------- Procediminetos Almacenados Table Precio-------------------------------------------- */
+
+/*------- Mostrar precios ------- */
+create proc MostrarPrecio
+@Condicion nvarchar(30)
+as
+select *from Precio where id_Precio like @Condicion+'%' or Tipo like @Condicion+'%' 
+GO
+
+
 /*--------------------------------------- Tabla de Precios ------------------------------------------ */
 
 CREATE TABLE Visita
@@ -208,10 +219,18 @@ CONSTRAINT fk_id_Precio FOREIGN KEY (id_Precio) REFERENCES Precio (id_Precio)
 );
 GO
 
-INSERT INTO Visita VALUES(102,103,101,GETDATE(),'2019/05/11',1);
+/*-------------------------------- Procediminetos Almacenados Table Visita-------------------------------------------- */
 
-select *from Visita
-
+/*------- Registar Visita ------- */
+create proc RegistrarVisita
+@id_Paciente INT,
+@id_Doctor INT,
+@id_Precio INT,
+@Fecha_Salida SMALLDATETIME,
+@Cama INT
+as
+insert into Visita values (@id_Paciente,@id_Doctor,@id_Precio,GETDATE(),@Fecha_Salida,@Cama)
+GO
 
 select  p.Nombre, D.Nombre, pr.Tipo, pr.Costo, v.Fecha_Salida From visita as v
 inner join Paciente as P on  P.id_Paciente= v.id_Paciente 
@@ -219,5 +238,3 @@ inner join Doctor as D on  D.id_Doctor= v.id_Doctor
 inner join Precio as Pr on  Pr.id_Precio= V.id_Precio   
 
 
-
-Select * From Doctor
