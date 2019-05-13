@@ -58,7 +58,7 @@ namespace Hospital.Controllers
         private void mostrarRegistrosDoctor(object sender, EventArgs e)
         {
             DoctorDAO dao = new DoctorDAO();
-            vista.TablaDoctor.DataSource = dao.MostarRegistros(vista.txtBuscar.Text);
+            vista.TablaDoctor.DataSource = dao.mostarRegistros(vista.txtBuscar.Text);
         }
 
         private void registrarPaciente(object sender, EventArgs e)

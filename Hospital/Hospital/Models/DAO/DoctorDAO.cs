@@ -34,7 +34,7 @@ namespace Hospital.Models.DAO
             return item;
         }
 
-        public List<DoctorDTO> MostarRegistros(String Condicion)
+        public List<DoctorDTO> mostarRegistros(String Condicion)
         {
             //Data Access object
             comando.Connection = Conexion;

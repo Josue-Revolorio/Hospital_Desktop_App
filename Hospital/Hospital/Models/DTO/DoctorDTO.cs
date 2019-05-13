@@ -8,13 +8,13 @@ namespace Hospital.Models.DTO
 {
     class DoctorDTO
     {
-        int id_Doctor;
-        string nombre;
-        string apellido;
-        string _DPI;
-        int telefono;
-        string especializacion;
-        int id_Epecialidad;
+        private int id_Doctor;
+        private string nombre;
+        private string apellido;
+        private string _DPI;
+        private int telefono;
+        private string especializacion;
+        private int id_Epecialidad;
 
         public int Id_Doctor { get => id_Doctor; set => id_Doctor = value; }
         public string Nombre { get => nombre; set => nombre = value; }

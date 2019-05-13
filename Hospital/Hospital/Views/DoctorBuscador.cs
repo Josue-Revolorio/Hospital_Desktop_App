@@ -11,12 +11,12 @@ using Hospital.Controllers;
 
 namespace Hospital.Views
 {
-    public partial class BuscadorPacientes : Form
+    public partial class DoctorBuscador : Form
     {
-        public BuscadorPacientes()
+        public DoctorBuscador()
         {
             InitializeComponent();
-            BuscardorController Vista = new BuscardorController(this);
+            DoctorBuscadorController Vista = new DoctorBuscadorController(this);
         }
     }
 }

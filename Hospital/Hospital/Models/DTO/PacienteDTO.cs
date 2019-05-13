@@ -9,15 +9,15 @@ namespace Hospital.Models.DTO
     class PacienteDTO
     {
 
-        int id;
-        string nombre;
-        string apellido;
-        string fecha_Nacimiento;
-        string _DPI;
-        string direccion;
-        int telefono;
-        string nit;
-        string sexo;
+        private int id;
+        private string nombre;
+        private string apellido;
+        private string fecha_Nacimiento;
+        private string _DPI;
+        private string direccion;
+        private int telefono;
+        private string nit;
+        private string sexo;
 
         public int Id { get => id; set => id = value; }
         public string Nombre { get => nombre; set => nombre = value; }

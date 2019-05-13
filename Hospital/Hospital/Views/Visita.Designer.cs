@@ -52,10 +52,16 @@
             this.txtCodigoPaciente = new System.Windows.Forms.TextBox();
             this.btnBuscarPaciente = new System.Windows.Forms.PictureBox();
             this.txtBuscarPaciente = new System.Windows.Forms.TextBox();
+            this.btnGuardar = new System.Windows.Forms.PictureBox();
+            this.btnNuevo = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarDoctor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarTipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarformulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPaciente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -268,12 +274,56 @@
             this.txtBuscarPaciente.Size = new System.Drawing.Size(385, 22);
             this.txtBuscarPaciente.TabIndex = 88;
             // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.Location = new System.Drawing.Point(466, 476);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 55);
+            this.btnGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnGuardar.TabIndex = 90;
+            this.btnGuardar.TabStop = false;
+            // 
+            // btnNuevo
+            // 
+            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
+            this.btnNuevo.Location = new System.Drawing.Point(621, 476);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(75, 55);
+            this.btnNuevo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnNuevo.TabIndex = 91;
+            this.btnNuevo.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(629, 534);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 17);
+            this.label11.TabIndex = 92;
+            this.label11.Text = "Nuevo";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(473, 534);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(61, 17);
+            this.label12.TabIndex = 93;
+            this.label12.Text = "Guardar";
+            // 
             // Visita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1180, 715);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnBuscarPaciente);
             this.Controls.Add(this.txtBuscarPaciente);
             this.Controls.Add(this.txtCodigoPaciente);
@@ -304,6 +354,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarTipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrarformulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuscarPaciente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnGuardar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNuevo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +385,9 @@
         public System.Windows.Forms.TextBox txtCodigoPaciente;
         public System.Windows.Forms.PictureBox btnBuscarPaciente;
         public System.Windows.Forms.TextBox txtBuscarPaciente;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.PictureBox btnGuardar;
+        public System.Windows.Forms.PictureBox btnNuevo;
     }
 }

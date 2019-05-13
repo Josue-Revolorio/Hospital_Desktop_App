@@ -46,23 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\BuscardorController.cs" />
+    <Compile Include="Controllers\DoctorBuscadorController.cs" />
+    <Compile Include="Controllers\PacienteBuscardorController.cs" />
     <Compile Include="Controllers\DoctorController.cs" />
     <Compile Include="Controllers\HomeCotroller.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Controllers\TipoBuscadorController.cs" />
     <Compile Include="Controllers\VisitaController.cs" />
     <Compile Include="Models\DAO\DBConexion.cs" />
     <Compile Include="Models\DAO\DoctorDAO.cs" />
     <Compile Include="Models\DAO\PacienteDAO.cs" />
+    <Compile Include="Models\DAO\PrecioDAO.cs" />
+    <Compile Include="Models\DAO\VisitaDAO.cs" />
     <Compile Include="Models\DTO\DoctorDTO.cs" />
     <Compile Include="Models\DTO\PacienteDTO.cs" />
+    <Compile Include="Models\DTO\PrecioDTO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\BuscadorPacientes.cs">
+    <Compile Include="Views\DoctorBuscador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BuscadorPacientes.Designer.cs">
-      <DependentUpon>BuscadorPacientes.cs</DependentUpon>
+    <Compile Include="Views\DoctorBuscador.Designer.cs">
+      <DependentUpon>DoctorBuscador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PacienteBuscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\PacienteBuscador.Designer.cs">
+      <DependentUpon>PacienteBuscador.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Inicio.cs">
       <SubType>Form</SubType>
@@ -88,6 +99,12 @@
     <Compile Include="Views\Doctor.designer.cs">
       <DependentUpon>Doctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TipoBuscador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TipoBuscador.Designer.cs">
+      <DependentUpon>TipoBuscador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Visita.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +120,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\BuscadorPacientes.resx">
-      <DependentUpon>BuscadorPacientes.cs</DependentUpon>
+    <EmbeddedResource Include="Views\DoctorBuscador.resx">
+      <DependentUpon>DoctorBuscador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PacienteBuscador.resx">
+      <DependentUpon>PacienteBuscador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -117,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Doctor.resx">
       <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TipoBuscador.resx">
+      <DependentUpon>TipoBuscador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Visita.resx">
       <DependentUpon>Visita.cs</DependentUpon>
