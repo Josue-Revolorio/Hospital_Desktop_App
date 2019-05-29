@@ -16,7 +16,7 @@ namespace Hospital
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new View.MenuPrincipal());
+            Application.Run(new Formulario_Login.FormuLogin());
         }
     }
 }

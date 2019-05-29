@@ -37,12 +37,12 @@
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnHistorial = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCerraSesion = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFactura = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnRegistrarDoctor = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,7 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.MenuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerraSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,12 +104,12 @@
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.MenuVertical.Controls.Add(this.panel6);
             this.MenuVertical.Controls.Add(this.btnHistorial);
-            this.MenuVertical.Controls.Add(this.pictureBox1);
+            this.MenuVertical.Controls.Add(this.btnCerraSesion);
             this.MenuVertical.Controls.Add(this.panel5);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.panel4);
-            this.MenuVertical.Controls.Add(this.button4);
+            this.MenuVertical.Controls.Add(this.btnFactura);
             this.MenuVertical.Controls.Add(this.panel3);
             this.MenuVertical.Controls.Add(this.btnRegistrarDoctor);
             this.MenuVertical.Controls.Add(this.panel2);
@@ -137,12 +137,12 @@
             this.btnHistorial.Name = "btnHistorial";
             this.btnHistorial.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnCerraSesion
             // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.TabStop = false;
+            this.btnCerraSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.btnCerraSesion, "btnCerraSesion");
+            this.btnCerraSesion.Name = "btnCerraSesion";
+            this.btnCerraSesion.TabStop = false;
             // 
             // panel5
             // 
@@ -178,16 +178,16 @@
             resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
-            // button4
+            // btnFactura
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(128)))), ((int)(((byte)(194)))));
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnFactura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.btnFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFactura.FlatAppearance.BorderSize = 0;
+            this.btnFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(128)))), ((int)(((byte)(194)))));
+            resources.ApplyResources(this.btnFactura, "btnFactura");
+            this.btnFactura.ForeColor = System.Drawing.Color.White;
+            this.btnFactura.Name = "btnFactura";
+            this.btnFactura.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -269,7 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.MenuVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerraSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.ResumeLayout(false);
 
@@ -292,8 +292,8 @@
         public System.Windows.Forms.Button btnRegistrarPaciente;
         public System.Windows.Forms.Button btnRegistrarDoctor;
         public System.Windows.Forms.Button btnVisita;
-        public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button btnFactura;
+        public System.Windows.Forms.PictureBox btnCerraSesion;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.Panel panel6;

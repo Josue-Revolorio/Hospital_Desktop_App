@@ -243,7 +243,25 @@ inner join Precio as Pr on  Pr.id_Precio= V.id_Precio
 inner join Especialidad as E on E.id_Especialidad = D.id_Especialidad where P.id_Paciente like @Condicion+'%' or P.Nombre  like @Condicion+'%' 
 Go
 
-exec MostrarVisita '' 
+
+/*------- Consultar Completa ------- */
+create proc VisitaCmpleta
+@Condicion nvarchar(30)
+as
+select P.id_Paciente,  V.id_Visita, P.Nombre, P.Apellido, P.Nit, V.Fecha_Salida, Pr.Tipo, Pr.Costo From visita as v
+inner join Paciente as P on  P.id_Paciente= v.id_Paciente 
+inner join Doctor as D on  D.id_Doctor= v.id_Doctor 
+inner join Precio as Pr on  Pr.id_Precio= V.id_Precio   
+inner join Especialidad as E on E.id_Especialidad = D.id_Especialidad where P.id_Paciente like @Condicion+'%' or P.Nombre  like @Condicion+'%' 
+Go
+
+
+
+
+
+
+
+
 /*--------------------------------------- Tabla Historial ------------------------------------------ */
 CREATE TABLE Historial
 (
@@ -301,11 +319,35 @@ GO
 
 
 
+/*--------------------------------------- Tabla Detalles Factura------------------------------------------ */
+CREATE TABLE Factura
+(
+id_factura INT IDENTITY(101,1) primary Key,
+id_Paciente INT,
+id_Visita INT
+CONSTRAINT fK_id_Paciente3 FOREIGN KEY (id_Paciente) REFERENCES Paciente (id_Paciente),
+CONSTRAINT fK_id_Visita3  FOREIGN KEY(id_Visita) REFERENCES Visita (id_Visita)
+);
+GO
+
+CREATE PROC RegistrarFactura
+@id_Paciente INT,
+@id_Visita INT
+as
+insert into Factura values (@id_Paciente, @id_Visita);
+GO
+
+exec RegistrarFactura 110,103
+
+CREATE PROC idMaximo
+as
+select max(id_factura) from Factura
+GO
 
 
+Select F.id_factura As No_Factura,V.Fecha_Salida as Fecha, P.id_Paciente, P.Nombre,P.Apellido, P.Nit From Factura as F
+inner join Paciente as P on P.id_Paciente = F.id_Paciente
+inner join Visita as V on V.id_Visita = F.id_Visita
 
 
-
-
-
-
+/*--------------------------------------- Tabla Usuario------------------------------------------ */

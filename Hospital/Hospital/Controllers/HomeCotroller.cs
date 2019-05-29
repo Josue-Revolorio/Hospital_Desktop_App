@@ -14,7 +14,7 @@ using Hospital.Views;
 
 namespace Hospital.Controllers
 {
-     public sealed class HomeCotroller
+    public sealed class HomeCotroller
     {
         private MenuPrincipal vista;
 
@@ -34,6 +34,8 @@ namespace Hospital.Controllers
             vista.btnInicio.Click += new EventHandler(abrirFormularioInicio);
             vista.btnVisita.Click += new EventHandler(abrirFormularioVisita);
             vista.btnHistorial.Click += new EventHandler(abrirFormularioHistorial);
+            vista.btnFactura.Click += new EventHandler(abrirFormularioFactura);
+            vista.btnCerraSesion.Click += new EventHandler(Logout);
         }
 
         /*---------------------Metodos Para Cerra, minimizar , restaurar el formulario-----------------*/
@@ -120,7 +122,24 @@ namespace Hospital.Controllers
             abrirFormulario(new Historial());
         }
 
+
+        private void abrirFormularioFactura(object sender, EventArgs e)
+        {
+            abrirFormulario(new Facturacion());
+        }
+
+
         /*--------------------------------------------------------------------------*/
+
+
+        private void Logout(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea cerrar sesión?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                vista.Close();
+            }
+
+        }
 
     }
 }

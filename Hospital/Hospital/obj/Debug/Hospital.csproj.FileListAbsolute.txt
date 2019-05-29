@@ -31,3 +31,6 @@ C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hosp
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.Historial.resources
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.VisitaBuscar.resources
 C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.HistorialBuscar.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.Detalle.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Hospital.Views.Facturacion.resources
+C:\Users\josue\Documents\1. Documentos De Desarrollo\3. Git\2. Proyectos\4. Hospital\Hospital_Desktop_App\Hospital\Hospital\obj\Debug\Formulario_Login.FormuLogin.resources
