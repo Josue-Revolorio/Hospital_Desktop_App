@@ -8,6 +8,10 @@ using System.Data.SqlClient;
 
 namespace Hospital.Models.DAO
 {
+    /**
+     * Cenexion a la base de datos 
+     * 
+     */
     public class DBConexion
     {
         protected SqlDataReader leer;
